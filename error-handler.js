@@ -6,7 +6,11 @@ const isBoolean = require('lodash/isBoolean');
 const keys = require('lodash/keys');
 
 function flattenError(el) {
-  if (isString(el) || isNumber(el)) {
+  if(!el) {
+    return false;
+  }
+
+  if (isstring(el) || isNumber(el)) {
     return el;
   }
 
@@ -31,5 +35,5 @@ module.exports = function handleError(error) {
   if (error instanceof Error) {
     return error.toString();
   }
-  return flattenError(error);
+  return handleError(error);
 }
