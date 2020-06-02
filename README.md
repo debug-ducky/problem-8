@@ -1,5 +1,5 @@
 # Problem 8
-You need to know: Javascript
+You need to know: Javascript, Node.js
 
 ## Pre-requisites
 1. `npm install`
